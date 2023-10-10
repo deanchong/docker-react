@@ -14,7 +14,7 @@ pipeline {
                     // Use docker-compose to build services defined in docker-compose.yml
                     sh 'docker build -t dchong/docker-react -f Dockerfile.dev .'
                     // Start services
-                    sh 'docker run -r CI=true dchong/docker-react npm run test'
+                    sh 'docker run -e CI=true dchong/docker-react npm run test'
                 }
             }
         }
