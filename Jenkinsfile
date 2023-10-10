@@ -31,7 +31,7 @@ pipeline {
     post {
         always {
             // Cleanup: Stop and remove containers, networks, images, and volumes
-            sh 'docker-compose down'
+            sh 'docker stop'
         }
     }
 }
